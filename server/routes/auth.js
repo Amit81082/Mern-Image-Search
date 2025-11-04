@@ -37,7 +37,7 @@ router.get("/logout", (req, res) => {
   req.logout(() => {
     req.session.destroy();
     res.clearCookie("connect.sid");
-    res.redirect("https://mern-image-search-pied.vercel.app/login");
+   res.status(200).json({ message: "Logged out successfully" });
   });
 });
 
