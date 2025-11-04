@@ -45,9 +45,8 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: false, // true only if using https
-      httpOnly: false,
-      sameSite: "lax",
+      secure: true, // true only if using https
+      sameSite: "none",
     },
   })
 );
