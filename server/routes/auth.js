@@ -11,7 +11,7 @@ router.get(
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "http://localhost:5173/",
+    successRedirect: "https://mern-image-search-pied.vercel.app/",
     failureRedirect: "/auth/failure",
   })
 );
@@ -25,17 +25,13 @@ router.get(
 router.get(
   "/github/callback",
   passport.authenticate("github", {
-    successRedirect: "http://localhost:5173/",
+    successRedirect: "https://mern-image-search-pied.vercel.app/",
     failureRedirect: "/auth/failure",
   })
 );
 
 router.get("/failure", (req, res) => res.send("Failed to login 😞"));
-router.get("/logout", (req, res) => {
-  req.logout(() => {
-    res.redirect("/");
-  });
-});
+
 
 router.get("/logout", (req, res) => {
   req.logout(() => {
