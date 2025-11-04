@@ -16,6 +16,14 @@ A full-stack MERN application that lets users **search images** from Unsplash, *
 
 ---
 
+## Screenshot 
+ <img width="628" height="517" alt="image" src="https://github.com/user-attachments/assets/4ec86975-2cb2-4166-a00c-fb68d5bee36d" />
+ <img width="1346" height="635" alt="image" src="https://github.com/user-attachments/assets/b8761439-7cec-4d98-82dd-83d32df03dbc" />
+ <img width="1346" height="639" alt="image" src="https://github.com/user-attachments/assets/7f994a80-d486-4129-815f-0b26f3418585" />
+
+
+
+
 ## 🧰 Tech Stack
 **Frontend:** React.js, Axios, React Router
 **Backend:** Node.js, Express.js, Passport.js
