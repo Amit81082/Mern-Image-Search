@@ -17,7 +17,12 @@ import "./config/passport.js";
 import authRoutes from "./routes/auth.js";
 const app = express();
 
-app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
+app.use(
+  cors({
+    origin: "https://mern-image-search-pied.vercel.app",
+    credentials: true,
+  })
+);
 
 
 
