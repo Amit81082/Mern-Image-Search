@@ -11,7 +11,7 @@ router.get(
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: "https://mern-image-search-pied.vercel.app/",
+    successRedirect: "https://mern-image-search-pied.vercel.app",
     failureRedirect: "/auth/failure",
   })
 );
@@ -25,7 +25,7 @@ router.get(
 router.get(
   "/github/callback",
   passport.authenticate("github", {
-    successRedirect: "https://mern-image-search-pied.vercel.app/",
+    successRedirect: "https://mern-image-search-pied.vercel.app",
     failureRedirect: "/auth/failure",
   })
 );
