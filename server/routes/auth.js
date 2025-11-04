@@ -1,0 +1,56 @@
+import express from "express";
+import passport from "passport";
+
+const router = express.Router();
+
+router.get(
+  "/google",
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
+
+router.get(
+  "/google/callback",
+  passport.authenticate("google", {
+    successRedirect: "http://localhost:5173/",
+    failureRedirect: "/auth/failure",
+  })
+);
+
+// GitHub login
+router.get(
+  "/github",
+  passport.authenticate("github", { scope: ["user:email"] })
+);
+
+router.get(
+  "/github/callback",
+  passport.authenticate("github", {
+    successRedirect: "http://localhost:5173/",
+    failureRedirect: "/auth/failure",
+  })
+);
+
+router.get("/failure", (req, res) => res.send("Failed to login 😞"));
+router.get("/logout", (req, res) => {
+  req.logout(() => {
+    res.redirect("/");
+  });
+});
+
+router.get("/logout", (req, res) => {
+  req.logout(() => {
+    req.session.destroy();
+    res.clearCookie("connect.sid");
+    res.json({ message: "Logged out" });
+  });
+});
+
+router.get("/user", (req, res) => {
+  if (req.user) {
+    res.json(req.user);
+  } else {
+    res.status(401).json({ message: "Not logged in" });
+  }
+});
+
+export default router;
