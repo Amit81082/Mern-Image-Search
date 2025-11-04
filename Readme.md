@@ -28,7 +28,6 @@ A full-stack MERN application that lets users **search images** from Unsplash, *
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the repository
-```bash
 git clone https://github.com/your-username/image-search-app.git
 cd image-search-app
 2️⃣ Install dependencies
