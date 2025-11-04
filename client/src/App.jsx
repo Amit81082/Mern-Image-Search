@@ -10,16 +10,21 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/auth/user", { withCredentials: true })
+      .get("https://mern-image-search-57yy.onrender.com/auth/user", {
+        withCredentials: true,
+      })
       .then((res) => setUser(res.data))
       .catch(() => setUser(null))
       .finally(() => setLoading(false));
   }, []);
 
     const handleLogout = async () => {
-      await axios.get("http://localhost:5000/auth/logout", {
-        withCredentials: true,
-      });
+      await axios.get(
+        "https://mern-image-search-57yy.onrender.com/auth/logout",
+        {
+          withCredentials: true,
+        }
+      );
       setUser(null); // frontend logout
     };
 

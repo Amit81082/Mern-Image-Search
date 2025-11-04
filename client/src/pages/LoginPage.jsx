@@ -3,11 +3,13 @@ import "./LoginPage.css";
 
 function LoginPage() {
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:5000/auth/google";
+    window.location.href =
+      "https://mern-image-search-57yy.onrender.com/auth/google";
   };
 
   const handleGitHubLogin = () => {
-    window.location.href = "http://localhost:5000/auth/github";
+    window.location.href =
+      "https://mern-image-search-57yy.onrender.com/auth/github";
   };
 
   return (

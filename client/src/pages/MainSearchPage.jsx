@@ -16,7 +16,7 @@ function SearchPage(props) {
   const fetchHistory = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/history/${userId}`
+        `https://mern-image-search-57yy.onrender.com/api/history/${userId}`
       );
       setHistory(res.data);
       console.log(res.data);
@@ -27,7 +27,9 @@ function SearchPage(props) {
 
   const fetchTopSearches = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/top-searches");
+      const res = await axios.get(
+        "https://mern-image-search-57yy.onrender.com/api/top-searches"
+      );
       setTopSearches(res.data);
     } catch (err) {
       console.error(err);
@@ -41,10 +43,13 @@ function SearchPage(props) {
      setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/search", {
-        term,
-        userId,
-      });
+      const res = await axios.post(
+        "https://mern-image-search-57yy.onrender.com/api/search",
+        {
+          term,
+          userId,
+        }
+      );
       setResults(res.data.results);
       setSelected([]);
       fetchHistory(); // refresh history
