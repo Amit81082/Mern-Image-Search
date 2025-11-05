@@ -38,10 +38,10 @@ function App() {
       <Route
         path="/"
         element={
-          user ? (
-            <SearchPage user={user} onLogout={handleLogout} />
-          ) : (
+          !user ? (
             <LoginPage />
+          ) : (
+            <SearchPage user={user} onLogout={handleLogout} />
           )
         }
       />
