@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import axios from "axios";
 import SearchPage from "./pages/MainSearchPage";
 import LoginPage from "./pages/LoginPage";
+import "./App.css";
 
 axios.defaults.withCredentials = true; // ✅ Always before useEffect
 
@@ -31,7 +32,8 @@ function App() {
     }
   };
 
-  if (loading) return null;
+if (loading) return <div className="loader">Loading...</div>;
+
 
   return (
     <Routes>
