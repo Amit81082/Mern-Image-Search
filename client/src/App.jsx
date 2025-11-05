@@ -32,7 +32,7 @@ function App() {
     }
   };
 
-if (loading) return <div className="loader">Loading...</div>;
+if (loading) return <div className="loader"></div>;
 
 
   return (
