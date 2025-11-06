@@ -12,13 +12,14 @@ function App() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate(); // ✅ inside component
 
-  useEffect(() => {
-    axios
-      .get("https://mern-image-search-57yy.onrender.com/auth/user")
-      .then((res) => setUser(res.data))
-      .catch(() => setUser(null))
-      .finally(() => setLoading(false));
-  }, []);
+ useEffect(() => {
+   setLoading(false); // show UI instantly
+   axios
+     .get("https://mern-image-search-57yy.onrender.com/auth/user")
+     .then((res) => setUser(res.data))
+     .catch(() => setUser(null));
+ }, []);
+
 
   const handleLogout = async () => {
     try {
