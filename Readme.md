@@ -120,7 +120,7 @@ Mern-Image-Search/
 └── README.md
 ```
 🔑 Login / Logout Flow
-
+```
 User visits Login page → Clicks Login with Google/GitHub/Facebook
 
 OAuth process: user authenticates and is redirected to main search page
@@ -128,7 +128,7 @@ OAuth process: user authenticates and is redirected to main search page
 User can search images, select, download, view history ✅
 
 User clicks Logout → backend session cleared → app returns to Login page
-
+```
 👨‍💻 Author
 
 Amit Maurya
