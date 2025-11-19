@@ -38,31 +38,32 @@ A full-stack MERN application that lets users **search images** from Unsplash, *
 ```bash
 git clone https://github.com/Amit81082/Mern-Image-Search.git
 cd Mern-Image-Search
+```
 
 2️⃣ Install dependencies
 
 Backend:
-
+```
 cd server
 npm install
-
+```
 2️⃣ Install dependencies
 
 Backend:
-
+```
 cd server
 npm install
-
+```
 
 Frontend:
-
+```
 cd client
 npm install
-
+```
 3️⃣ Environment Setup
 
 Create a .env file in the server folder and add your keys:
-
+```
 PORT=5000
 MONGO_URI=your_mongo_connection_string
 SESSION_SECRET=your_session_secret
@@ -74,25 +75,26 @@ FACEBOOK_CLIENT_ID=…
 FACEBOOK_CLIENT_SECRET=…
 UNSPLASH_ACCESS_KEY=your_unsplash_key
 CLIENT_URL=http://localhost:5173
-
+```
 4️⃣ Run the Project
 
 Backend:
-
+```
 cd server
 npm start
-
+```
 
 Frontend:
-
+```
 cd client
 npm run dev
-
+```
 
 Frontend runs on http://localhost:5173
 Backend runs on http://localhost:5000
 
 📂 Folder Structure
+```
 Mern-Image-Search/
 │
 ├── client/                # React frontend
@@ -116,7 +118,7 @@ Mern-Image-Search/
 │
 ├── .env.example
 └── README.md
-
+```
 🔑 Login / Logout Flow
 
 User visits Login page → Clicks Login with Google/GitHub/Facebook
